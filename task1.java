@@ -1,5 +1,5 @@
 package task1;
-
+// Матрица, рисующая крест, заполняя остальное нулями
 public class CuteMatrix {
 	public static void main(String[] args) {
 		int A[][]=new int[10][10];
