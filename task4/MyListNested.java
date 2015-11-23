@@ -1,11 +1,16 @@
 package lesson150924;
 
-public class MyListModified<T> {
-
-	Node<T> first,last;
+public class MyListNested<T> {
+	
+	private class Node1 {
+		T data;
+		Node1 next;
+	}
+		
+	Node1 first,last;
 	
 	public void add(T data) {
-		Node<T> node = new Node<T>();
+		Node1 node = new Node1();
 		node.data = data;
 		node.next = first;
 		first = node;
@@ -15,7 +20,7 @@ public class MyListModified<T> {
 	}
 	
 	public void addLast(T data) {
-		Node<T> node = new Node<T>();
+		Node1 node = new Node1();
 		node.data = data;
 		if (last != null) {
 			last.next = node;
@@ -27,13 +32,11 @@ public class MyListModified<T> {
 	}
 	
 	
-	
-	
 	@Override
 	public String toString() {
 		
 		String s = "[";
-		Node<T> temp = first;
+		Node1 temp = first;
 		
 		while (temp != null) {
 			s+=temp.data;
@@ -42,6 +45,6 @@ public class MyListModified<T> {
 		}
 		
 		return s+"]";
-	}
 	
+		}
 }

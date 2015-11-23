@@ -1,10 +1,10 @@
 package lesson150924;
 
-public class UseList {
+public class UseListNested {
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
-		MyListModified<String> list = new MyListModified<>();
+		MyListNested<String> list = new MyListNested<>();
 		
 		list.add("One");
 		list.add("Two");
@@ -13,7 +13,10 @@ public class UseList {
 		
 		list.addLast("Null");
 		list.addLast("Minus one");
+		
+		list.add("Four");
+		
 		System.out.println(list);
-	}
 
+}
 }
